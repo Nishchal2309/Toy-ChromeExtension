@@ -1,5 +1,5 @@
 {
-    "name": "img/reminder.png",
+    "name": "Reminder",
     "description": "Testing our first chrome extension",
     "version": "1.0",
     "manifest_version": 3,
