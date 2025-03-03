@@ -3,7 +3,8 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
- 
+
+    
 }
 
 .main-container{
@@ -16,7 +17,6 @@ body {
     width: 500px;  
     height: 300px; 
     display: flex;
-    border-radius: 30px;
 }
 
 .text-h1{
@@ -59,4 +59,21 @@ body {
     text-align: center;
     width: 100%;
     max-width: 500px;
+}
+
+
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0.2; transform: scale(1); }
 }
