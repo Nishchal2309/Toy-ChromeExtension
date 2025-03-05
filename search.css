@@ -61,7 +61,7 @@ body {
     max-width: 500px;
 }
 
-
+/* css for the stars */
 
 .star {
     position: absolute;
@@ -77,3 +77,30 @@ body {
     50% { opacity: 1; transform: scale(1.5); }
     100% { opacity: 0.2; transform: scale(1); }
 }
+
+/*css for search button -> keep it simple*/
+
+.searchallbtn {
+    padding: 10px 15px;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+  
+  .searchallbtn {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+  }
+  
+  .searchallbtn:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }
