@@ -3,6 +3,7 @@
     "description": "Testing our first chrome extension",
     "version": "1.0",
     "manifest_version": 3,
+    "host_permissions": ["https://medium.com/*", "https://stackoverflow.com/*"],
     "action": {
       "default_popup": "search.html",
       "default_icon": "img/N.png"
