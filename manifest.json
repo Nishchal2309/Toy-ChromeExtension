@@ -1,9 +1,9 @@
 {
-    "name": "Reminder",
-    "description": "Testing our first chrome extension",
+    "name": "Multi-plugin",
+    "description": "This plugin allows you to search multiple websites",
     "version": "1.0",
     "manifest_version": 3,
-    "host_permissions": ["https://medium.com/*", "https://stackoverflow.com/*"],
+    "host_permissions": ["https://medium.com/*", "https://stackoverflow.com/*", "https://www.google.com/*"],
     "action": {
       "default_popup": "search.html",
       "default_icon": "img/N.png"

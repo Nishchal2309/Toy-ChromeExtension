@@ -1,13 +1,13 @@
-console.log('This is a popup!');
+console.log('infinity btn');
 
 var crazyBtn = document.getElementById("crazysearch");
-const websiteList = ["https://medium.com/search?q=", "https://stackoverflow.com/search?q="]
+const websiteList = ["https://medium.com/search?q=", "https://stackoverflow.com/search?q="
+    , "https://www.google.com/search?q="]
  // https://medium.com/search?q=JavaScript
         //https://www.google.com/search?q=null+pointer+exception+site:stackoverflow.com
 crazyBtn.onclick = async function(){ // purpose of this button is to open multiple tabs with realted search
     var getInputFieldVal = document.getElementById("inputarea");
     if(getInputFieldVal.value == null || getInputFieldVal.value === ''){
-        console.log(getInputFieldVal.value)
         console.log("input text area is empty");
     }else{
         console.log("input text value ", getInputFieldVal.value);

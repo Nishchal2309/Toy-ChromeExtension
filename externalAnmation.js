@@ -16,7 +16,7 @@ function createAnimation() {
         if(x == pairList.length -1){
             x = 0;
         }
-        if(counter > 12){
+        if(counter > 15){
             break;
         }
     }
