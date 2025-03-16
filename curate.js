@@ -25,7 +25,11 @@ curateSearch.onclick = async function(){
             //     console.log('string to obj', JSON.parse(jsonToString));
             //     console.log(getJson.items);
             // }
-                console.log('string to obj', JSON.parse(testStringResponse));
+            var obj = JSON.parse(testStringResponse);
+
+            for(var x = 0; x <(obj.items).length; x++){
+                console.log(x+1, (obj.items)[x]);
+            }
         }catch(err){
             console.log('err fetching from google api', err);
         }
