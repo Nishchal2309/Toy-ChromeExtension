@@ -11,12 +11,28 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #1e1e1e;
     color: #fff;
-    justify-content: center;
+    justify-content: start;
+    overflow: auto;
     align-items: center;
     margin: 0;
     width: 500px;  
     height: 300px; 
     display: flex;
+    flex-direction: column;
+}
+
+.div1{
+    top: 0;
+    flex-shrink:0;
+    position: relative; 
+}
+
+.main-result-container{
+    text-align: center;
+    flex-shrink:0;
+    width: 100%;
+    overflow-y: auto;
+    flex-grow: 1; 
 }
 
 .text-h1{
@@ -29,11 +45,6 @@ body {
     border-color: rgba(0, 188, 212, 0.5);
     box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
     transition: all 0.5s ease-in-out;
-}
-
-.div1{
-    position: absolute;
-    top: 0;
 }
 
 .search-bar{

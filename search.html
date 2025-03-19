@@ -2,6 +2,7 @@
 
 <head>
   <link rel="stylesheet" href="search.css">
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' http://localhost:* http://127.0.0.1:*"> -->
 </head>
 
 <body>
@@ -18,12 +19,12 @@
       </div>
     </div>
 
-
-
+    <div class="main-result-container" id="resultContainer"></div>
   </div>
   <script src="externalAnmation.js"></script>
   <script src="search.js"></script>
-  <script src="curate.js"></script>
+  <script src="config.js"></script>
+  <script type="module" src="curate.js"></script>
 </body>
 
 </html>
