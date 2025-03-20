@@ -29,11 +29,19 @@ curateSearch.onclick = async function(){
             var obj = JSON.parse(testStringResponse);
             const selectSearchContainer = document.getElementById("resultContainer");
             for(var x = 0; x < (obj.items).length; x++){
-                console.log(x+1, (obj.items)[x]);
+                var getObj = obj.items[x];
+                console.log(getObj)
                 const searchDivElement = document.createElement("div");
-                var h2 = document.createElement('h2');
-                h2.innerHTML = "This is test text " + x;
-                searchDivElement.appendChild(h2)
+
+                var followLink = document.createElement('h3');
+                followLink.innerHTML = getObj.link;
+                searchDivElement.appendChild(followLink);
+                searchDivElement.classList.add("searchBox");
+                // add even listener for the div here
+                searchDivElement.addEventListener("click", function(){
+                    console.log('text content', searchDivElement.textContent);
+                    window.open(searchDivElement.textContent)
+                });
                 selectSearchContainer.appendChild(searchDivElement);
             }
         }catch(err){

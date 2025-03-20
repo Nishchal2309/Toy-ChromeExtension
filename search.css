@@ -35,6 +35,19 @@ body {
     flex-grow: 1; 
 }
 
+.searchBox{
+    width: auto;
+    margin: 15px;
+    border: 2px  rgba(0, 188, 212, 0.5) solid;
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+.searchBox:hover{
+    border-color: #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    transition: all 0.4s ease-in-out;
+}
 .text-h1{
  
     transition: all 0.5s ease-in-out;
