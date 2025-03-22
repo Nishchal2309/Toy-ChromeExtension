@@ -10,6 +10,7 @@ what it does ??
 - infinity btn => opens result from a set of hardcoded urls currently medium, stack overflow and google .
 - search btn => hits the google api in the background and curates result in the plugin itself.
 - next steps : for the search feature, it'd be better open an iframe or some other idea inside the plugin on click of the div. Instead of just opening it in another tab on click of div.
+  also storing api key in code isnt a good idea, better to get from storage.
 
-pros :opening it in the other tabs just defeats the purpose of having an un cluttered browser
-cons : many websites restrict opening iframes
+- pros :opening it in the other tabs just defeats the purpose of having an un cluttered browser
+- cons : many websites restrict opening iframes
