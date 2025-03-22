@@ -1,4 +1,3 @@
-// import { env } from 'node:process';
 
 const apiKey = CONFIG.GOOGLE_API_KEY;
 const cxVal = '858e76d71fe1947b4';
@@ -14,22 +13,16 @@ curateSearch.onclick = async function(){
     }else{
         console.log("btn to get results from google api");
         var query = getInputFieldQuery.value
-        // var createUrl = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cxVal}&q=${query}`
+        var createUrl = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cxVal}&q=${query}`
         try{
-            // const googleResp = await fetch(createUrl)
-            // if(googleResp.ok){
-            //     var getJson = await googleResp.json()
-            //     console.log('here is the json response', getJson)
-            //     var jsonToString = JSON.stringify(getJson);
-            //     console.log('json to string', jsonToString)
-
-            //     console.log('string to obj', JSON.parse(jsonToString));
-            //     console.log(getJson.items);
-            // }
-            var obj = JSON.parse(testStringResponse);
-            const selectSearchContainer = document.getElementById("resultContainer");
-            for(var x = 0; x < (obj.items).length; x++){
-                var getObj = obj.items[x];
+            const googleResp = await fetch(createUrl)
+            if(googleResp.ok){
+                var getJson = await googleResp.json()
+                console.log('here is the json response', getJson)
+                // var obj = JSON.stringify(getJson);
+                const selectSearchContainer = document.getElementById("resultContainer");
+            for(var x = 0; x < (getJson.items).length; x++){
+                var getObj = getJson.items[x];
                 console.log(getObj)
                 const searchDivElement = document.createElement("div");
 
@@ -40,10 +33,12 @@ curateSearch.onclick = async function(){
                 // add even listener for the div here
                 searchDivElement.addEventListener("click", function(){
                     console.log('text content', searchDivElement.textContent);
-                    window.open(searchDivElement.textContent)
+                    window.open(searchDivElement.textContent) 
                 });
                 selectSearchContainer.appendChild(searchDivElement);
             }
+            }
+            
         }catch(err){
             console.log('err fetching from google api', err);
         }
